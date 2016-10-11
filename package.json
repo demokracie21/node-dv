@@ -1,6 +1,6 @@
 {
   "name": "dv",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "description": "DocumentVision is a node.js library for processing and understanding scanned documents",
   "keywords": [
     "graphics",
@@ -34,7 +34,7 @@
     "url": "git://github.com/creatale/node-dv.git"
   },
   "scripts": {
-    "install": "if [ ! -f ./lib/dvBinding.node ]; then node-gyp rebuild ; fi",
+    "install": "SRC_DIR=$(cd ./lib; pwd) && echo \"$SRC_DIR/dvBinding.node\"; if [ ! -f \"$SRC_DIR/dvBinding.node\" ]; then node-gyp rebuild ; fi",
     "postinstall": "node-gyp clean",
     "test": "mocha test"
   },
