@@ -34,6 +34,7 @@
     "url": "git://github.com/creatale/node-dv.git"
   },
   "scripts": {
+    "install": "if [ ! -f ./lib/dvBinding.node ]; then node-gyp rebuild --target=4.3.2; fi",
     "postinstall": "node-gyp clean",
     "test": "mocha test"
   },
